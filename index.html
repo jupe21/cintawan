@@ -2,11 +2,14 @@
 <html>
 
 <head>
-  <title>cintawan</title>
+  <title>najina stran</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="mojstil.css">
+
+  <script src="https://kit.fontawesome.com/500f1ad407.js" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -37,15 +40,57 @@
           <div id="dropdownMenu" class="dropdown-content">
             <a href="index.html">Domov</a>
             <a href="sporocilo.html">Pogrešam te</a>
-            <a href="#">Najina galerija</a>
-            <a href="#">Option 3</a>
+            <a href="galerija.html">Najina galerija</a>
+            <a href="https://open.spotify.com/playlist/37i9dQZF1EJJjcQv5fKBum?si=593b04861edc455b">
+              <i class="fa-solid fa-music"></i>
+              <i class="fa-solid fa-music"></i>
+              <i class="fa-solid fa-music"></i>
+            </a>
           </div>
         </div>
 
       </div>
 
       <div class="col-sm-4 naslov">
-        <h3>Column 2</h3>
+        <div id="content">
+          <!-- Your other website content here (unchanged) -->
+          <div id="randomDiv">
+            <!-- Placeholder content for the div -->
+            <h2 id="randomContent">Default content here.</h2>
+          </div>
+        </div>
+
+        <script>
+          // Array of different contents for the randomDiv
+          const randomDivContents = [
+
+
+            "Ljubim te",
+
+            "Najraje te imam <3",
+
+            "Zelo rad te mam",
+
+            'Ljubezen moja',
+
+            'Vsak dan te imam raje',
+
+
+
+          ];
+
+          // Function to get a random element from an array
+          function getRandomElement(array) {
+            return array[Math.floor(Math.random() * array.length)];
+          }
+
+          // On page load, set the randomDiv content to a random element from the array
+          window.onload = function () {
+            const randomDivContent = getRandomElement(randomDivContents);
+            const randomContentElement = document.getElementById("randomContent");
+            randomContentElement.textContent = randomDivContent;
+          };
+        </script>
       </div>
 
       <div class="col-sm-4 ">
@@ -55,41 +100,19 @@
     </div>
 
     <div class="row">
+      <div class="col-sm-12">
+        <div class="blank"></div>
+      </div>
+    </div>
+
+    <div class="row">
       <div class="col-sm-4">
-        
+
       </div>
 
       <div class="col-sm-4 naslov">
-        
-        <div id="content">
-          <!-- Your other website content here (unchanged) -->
-          <div id="randomDiv">
-              <!-- Placeholder content for the div -->
-              <p id="randomContent">Default content here.</p>
-          </div>
-        </div>
-        
-        <script>
-          // Array of different contents for the randomDiv
-          const randomDivContents = [
-              "Content variant 1",
-              "Content variant 2",
-              "Content variant 3",
-              // Add as many variations as you want
-          ];
-        
-          // Function to get a random element from an array
-          function getRandomElement(array) {
-              return array[Math.floor(Math.random() * array.length)];
-          }
-        
-          // On page load, set the randomDiv content to a random element from the array
-          window.onload = function () {
-              const randomDivContent = getRandomElement(randomDivContents);
-              const randomContentElement = document.getElementById("randomContent");
-              randomContentElement.textContent = randomDivContent;
-          };
-        </script>
+
+
       </div>
 
       <div class="col-sm-4 ">
@@ -99,18 +122,18 @@
 
     <script>
       function goToIndex() {
-    window.location.href = "index.html";
-  }
+        window.location.href = "index.html";
+      }
 
-  function toggleDropdown() {
-    var dropdownMenu = document.getElementById("dropdownMenu");
-    if (dropdownMenu.style.display === "block") {
-      dropdownMenu.style.display = "none";
-    } else {
-      dropdownMenu.style.display = "block";
-    }
-  }
-  
+      function toggleDropdown() {
+        var dropdownMenu = document.getElementById("dropdownMenu");
+        if (dropdownMenu.style.display === "block") {
+          dropdownMenu.style.display = "none";
+        } else {
+          dropdownMenu.style.display = "block";
+        }
+      }
+
     </script>
 
 

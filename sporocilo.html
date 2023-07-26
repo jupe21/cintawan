@@ -8,6 +8,9 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="mojstil.css">
 
+    <script src="https://kit.fontawesome.com/500f1ad407.js" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
@@ -22,55 +25,70 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-2">
-
+            <div class="col-sm-4">
                 <!-- Dropdown container -->
                 <div class="dropdown-container">
                     <!-- Your provided button -->
-                    <button id="myButton" class="custom-button" onclick="goToIndex()">
+                    <button id="myButton" class="custom-button" onclick="toggleDropdown()">
                         <svg viewBox="0 0 256 256">
                             <rect fill="none" height="256" width="256"></rect>
                             <path
                                 d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
-                                stroke-width="20px" stroke="#FFF" fill="none"></path>
+                                stroke-width="10px" stroke="#FFF" fill="none"></path>
                         </svg>
                     </button>
 
                     <!-- Dropdown menu -->
                     <div id="dropdownMenu" class="dropdown-content">
+                        <a href="index.html">Domov</a>
                         <a href="sporocilo.html">Pogrešam te</a>
-                        <a href="#">Option 2</a>
-                        <a href="#">Option 3</a>
+                        <a href="galerija.html">Najina galerija</a>
+                        <a href="https://open.spotify.com/playlist/37i9dQZF1EJJjcQv5fKBum?si=593b04861edc455b">
+                            <i class="fa-solid fa-music"></i>
+                            <i class="fa-solid fa-music"></i>
+                            <i class="fa-solid fa-music"></i>
+                        </a>
                     </div>
                 </div>
 
             </div>
 
-            <div class="row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-8 myForm">
+            <div class="col-sm-4 naslov">
+                <h3>Pošlji obvestilo, povej da me pogrešaš <i class="fa-solid fa-heart"></i></h3>
+            </div>
+        </div>
 
-                    <form class="containerInput">
-                        <input placeholder="Napiši sporočilo" id="messageInput" class="input" name="text" type="text">
-                        <button class="button" type="submit" onclick="sendEmail()">poslji</button>
-                    </form>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="blank"></div>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 myForm">
 
-                </div>
-                <div class="col-sm-2"></div>
-
+                <form class="containerInput">
+                    <input placeholder="Napiši sporočilo" id="messageInput" class="input" name="text" type="text">
+                    <button class="button" type="submit" onclick="sendEmail()">Pošlji</button>
+                </form>
 
 
             </div>
+            <div class="col-sm-2"></div>
+
+
+
         </div>
+    </div>
     </div>
 
 
     <script>
         // Function to navigate to index.html
-  function goToIndex() {
-    window.location.href = "index.html";
-  }
+        function goToIndex() {
+            window.location.href = "index.html";
+        }
 
 
         // Initialize EmailJS with your User ID
@@ -98,6 +116,22 @@
                 });
         }
     </script>
+
+<script>
+    function goToIndex() {
+      window.location.href = "index.html";
+    }
+
+    function toggleDropdown() {
+      var dropdownMenu = document.getElementById("dropdownMenu");
+      if (dropdownMenu.style.display === "block") {
+        dropdownMenu.style.display = "none";
+      } else {
+        dropdownMenu.style.display = "block";
+      }
+    }
+
+  </script>
 
 </body>
 

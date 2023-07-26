@@ -5,7 +5,6 @@ body {
     background-position: center;
 
     font-family: cursive;
-
   }
 
 .card{
@@ -20,7 +19,44 @@ body {
 }
 
 
-  /* 1. heart button */
+/* Larger font size for phones (adjust the max-width as needed) */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 15px; /* Adjust the value as needed for the larger size */
+  }
+}
+
+
+
+div.gallery {
+  margin: 5px;
+  float: left;
+  height: 400px; /* Set a fixed height for all gallery items */
+  box-sizing: border-box; /* Include the border within the height and width */
+}
+
+div.gallery .image-wrapper {
+  border: 1px solid #ccc; /* Apply the border to the image wrapper */
+  height: 100%; /* Set the height to 100% to take the full height of the gallery item */
+  box-sizing: border-box; /* Include the border within the height and width */
+  overflow: hidden; /* Hide any content that might overflow inside the wrapper */
+}
+
+div.gallery img {
+  width: 100%; /* Set the width to 100% to take the full width of the image wrapper */
+  height: 100%; /* Set the height to 100% to take the full height of the image wrapper */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+.blank{
+  height: 80px;
+}
+
+/* 1. heart button */
 
   /* chatgpt */
 
@@ -116,7 +152,9 @@ body {
   font-size: 0.8rem;
   outline: none;
   transition: 0.5s ease;
-  width: 80%;
+  width: 100%;
+
+  text-align: center;
 }
 
 .input:hover {
@@ -140,11 +178,11 @@ body {
   text-align: center;
   color: rgb(95, 87, 87);
   cursor: pointer;
-  background-color: white;
+  background-color: rgba(255, 24, 24, 0.361);
   border-radius: 6px;
   border: none;
   transition: 0.5s;
-  width: 100%;
+  width: 50%;
   margin-top: 7px;
   font-size: 13px;
   box-shadow: rgba(104, 100, 100, 0.1) 0px 4px 6px -1px, rgba(49, 42, 42, 0.06) 0px 2px 4px -1px;
