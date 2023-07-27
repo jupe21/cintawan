@@ -226,10 +226,6 @@ div.gallery .desc {
 /* Larger font size for phones (adjust the max-width as needed) */
 @media screen and (max-width: 768px) {
 
-  body{
-    background-color: aqua;
-  }
-
   /* Display one image at a time and center it on the screen */
   div.gallery {
     display: flex;
@@ -253,7 +249,7 @@ div.gallery .desc {
 
 
   body {
-    font-size: 15px; /* Adjust the value as needed for the larger size */
+    font-size: 17px; /* Adjust the value as needed for the larger size */
   }
 
 
